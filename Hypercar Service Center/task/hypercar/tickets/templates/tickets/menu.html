@@ -1,0 +1,14 @@
+{% extends 'tickets/base.html' %}
+
+{% block title %}{{ block.super }}{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for url, name in menu.items %}
+        <li>
+            <a href="/get_ticket/{{ url }}"> {{ name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
